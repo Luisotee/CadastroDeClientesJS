@@ -47,3 +47,9 @@ input[type=text] {
     display: flex;
     justify-content: center;
 }
+
+#uf {
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
