@@ -17,22 +17,22 @@
                 <h1>Helpper</h1>
             </div>
             <div class="forms">
-                <form onerror="errorMessage">
+                <form>
                     <div>
                         Nome
-                        <input type="text" class="name" placeholder="Nome" required>
+                        <input type="text" class="name" value="Luis" required>
                     </div>
                     <div>
                         Email
-                        <input type="text" class="email" placeholder="E-mail" required>
+                        <input type="text" class="email" value="luisotaviomgr@hotmail.com" required>
                     </div>
                     <div>
                         Celular
-                        <input type="text" class="form-control" class="cell" id="celular" placeholder="Celular" minlength="11" maxlength="11" required>
+                        <input type="text" class="form-control" class="cell" id="celular" value="15991306053" minlength="11" maxlength="11" required>
                     </div>
                     <div>
                         CEP
-                        <input type="text" id="cep" placeholder="CEP" minlength="8" maxlength="8" required>
+                        <input type="text" id="cep" value="18087190" minlength="8" maxlength="8" required>
                     </div>
                     <div>
                         <label for="uf">Estado</label>
@@ -65,26 +65,26 @@
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
                         </select>
-                        <label for="cidade">Cidade</label> <input type="text" class="city" name="cidade" placeholder="Cidade" style="width: 40%;" required>
+                        <label for="cidade" style="margin-left: 137px;">Cidade</label> <input type="text" class="city" name="cidade" value="Cidade" style="width: 40%;" required>
                     </div>
                     <div>
-                        Logradouro <input type="text" class="street" placeholder="Logradouro" required>
+                        Logradouro <input type="text" class="street" value="Logradouro" required>
                     </div>
                     <div>
-                        Numero <input type="text" class="number" placeholder="Numero" required>
+                        Numero <input type="text" class="number" value="581" required>
                     </div>
                     <div>
-                        Bairro <input type="text" class="address" placeholder="Bairro" required>
+                        Bairro <input type="text" class="address" value="Bairro" required>
                     </div>
             </div>
             <div class="enviar">
-                <button class="button" id="send">Enviar</button>
+                <button type="button" class="button" id="send">Enviar</button>
                 </form>
                 <a href="./src/views/list.html"><button class="button">Listar</button></a>
             </div>
         </div>
     </section>
-    <script src="./bundle.js"></script>
+    <script src="./main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script type="text/javascript">

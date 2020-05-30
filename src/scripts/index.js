@@ -1,26 +1,33 @@
-import * as funcoes from '../scripts/teste.js'
+import * as utils from './validateCadastro';
 
-console.log(funcoes.soma(5, 4));
 document.getElementById('send').addEventListener("click", send);
 
-function send() {
-    const usuario = {
-        nome: document.querySelector(".name").value,
-        celular: document.getElementById("celular").value,
-        email: document.querySelector(".email").value,
-        endereco: {
-            cep: document.getElementById("cep").value,
-            logradouro: document.querySelector(".street").value,
-            numero: document.querySelector(".number").value,
-            bairro: document.querySelector(".address").value,
-            cidade: document.querySelector(".city").value,
-            estado: document.getElementById("uf").value,
-        },
-    };
+const users = JSON.parse(localStorage.getItem('users'));
 
-    console.log(usuario);
+function send() {
+    console.log(users);
+    if (utils.validateForm()) {
+        const usuario = {
+            registro: users.length + 1,
+            nome: document.querySelector(".name").value,
+            celular: document.getElementById("celular").value,
+            email: document.querySelector(".email").value,
+            endereco: {
+                cep: document.getElementById("cep").value,
+                logradouro: document.querySelector(".street").value,
+                numero: document.querySelector(".number").value,
+                bairro: document.querySelector(".address").value,
+                cidade: document.querySelector(".city").value,
+                estado: document.getElementById("uf").value,
+            },
+        };
+        users.push(usuario);
+        console.log(users);
+        saveToLocal()
+    }
 }
 
+
 function saveToLocal() {
-    localStorage.setItem('data', JSON.stringify(usuario));
+    localStorage.setItem('users', JSON.stringify(users));
 }

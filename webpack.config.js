@@ -1,8 +1,11 @@
 module.exports = {
-    entry: './src/scripts/index.js',
+    entry: {
+        main: './src/scripts/index.js',
+        listItens: './src/scripts/listItens.js'
+    },
     output: {
         path: __dirname + '/public',
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     devServer: {
         contentBase: __dirname
