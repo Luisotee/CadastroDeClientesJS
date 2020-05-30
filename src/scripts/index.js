@@ -2,12 +2,12 @@ import * as utils from './validateCadastro';
 
 document.getElementById('send').addEventListener("click", send);
 
-const users = JSON.parse(localStorage.getItem('users'));
+const users = JSON.parse(localStorage.getItem('users')) || [];
 
 function send() {
     console.log(users);
     if (utils.validateForm()) {
-        const usuario = {
+        const user = {
             registro: users.length + 1,
             nome: document.querySelector(".name").value,
             celular: document.getElementById("celular").value,
@@ -21,7 +21,7 @@ function send() {
                 estado: document.getElementById("uf").value,
             },
         };
-        users.push(usuario);
+        users.push(user);
         console.log(users);
         saveToLocal()
     }

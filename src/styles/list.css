@@ -1,13 +1,11 @@
 .corpo {
     background-color: #f4f4f4;
-    height: 965px;
     border: 1px solid #f4f4f4;
 }
 
 .area {
     margin: 0 auto;
     margin-top: 75px;
-    height: 866px;
     width: 782px;
     display: block;
 }
@@ -16,7 +14,6 @@
     padding: 10px 10px;
     font-size: large;
     background-color: #ffffff;
-    max-height: 731px;
     max-width: 752px;
     padding: 32px;
     border: 1px solid black;
