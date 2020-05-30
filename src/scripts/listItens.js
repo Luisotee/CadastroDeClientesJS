@@ -7,15 +7,12 @@ function renderUsers() {
 
     for (user of users) {
         const userElement = document.createElement('li');
-        const linkElement = document.createElement('button');
+        const buttonElement = document.createElement('button');
 
-        linkElement.setAttribute('class', 'excludeButton');
+        buttonElement.setAttribute('class', 'excludeButton');
 
         var pos = users.indexOf(user);
 
-        const userRegister = document.createTextNode("Registro: " + user.registro);
-        userElement.appendChild(userRegister);
-        userElement.appendChild(document.createElement("br"));
         const userName = document.createTextNode("Nome: " + user.nome);
         userElement.appendChild(userName);
         userElement.appendChild(document.createElement("br"));
@@ -45,12 +42,12 @@ function renderUsers() {
 
         listElement.appendChild(userElement);
 
-        //linkElement.addEventListener("click", deleteUser(pos));
-        linkElement.setAttribute('onclick', 'deleteUser(' + pos + ')')
-        const linktext = document.createTextNode('Excluir');
-        linkElement.appendChild(linktext);
+        buttonElement.setAttribute('onclick', 'deleteUser(' + pos + ')')
 
-        listElement.appendChild(linkElement);
+        const buttonText = document.createTextNode('Excluir');
+        buttonElement.appendChild(buttonText);
+
+        listElement.appendChild(buttonElement);
     }
 }
 

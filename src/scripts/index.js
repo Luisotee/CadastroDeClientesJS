@@ -8,7 +8,6 @@ function send() {
     console.log(users);
     if (utils.validateForm()) {
         const user = {
-            registro: users.length + 1,
             nome: document.querySelector(".name").value,
             celular: document.getElementById("celular").value,
             email: document.querySelector(".email").value,
