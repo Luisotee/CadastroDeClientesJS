@@ -3,7 +3,7 @@ Formulario de cadastro de clientes feito para aprendizado. O programa utiliza tr
 No desenvolvimento foi utilizado o loader Babel para a melhor compatibilidade com navegadores mais antigos. Também foi utilizado a biblioteca JQuerry para as máscaras do formulário.
 
 ## Estrutura do código
-Dentro da pasta do projeto, a uma pasta chamada "dist", nessa pasta possui o código buildado pronto para a utilização.
+Dentro da pasta do projeto, há uma pasta chamada "dist", nessa pasta possui o código buildado pronto para a utilização.
 
 ### HTML
 O programa em si possuí apenas duas paginas, a do formulário e a de visualização das informações. O HTML da página do furmulário está na pasta raiz do projeto com o nome "index.html", já a de visualização de informações está localizada em src\views, com o nome de "list.html".
