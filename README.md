@@ -25,9 +25,16 @@ O "listItens.js" é o script utilizado na pagina de visualização de dados, e o
 ### Yarn
 Para começar primeiro execute o comando "yarn install".
 
--"yarn dev": Transcompila o seu código, nesse estado o codigo que foi transcompilado não vai ser visivel para você, e aplica o hot reload. No começo da execução ele informa um endereço onde o servidor local foi estabelecido
+-"yarn dev": Transcompila o seu código, nesse estado o codigo que foi transcompilado não vai ser visivel para você, e aplica o hot reload. No começo da execução ele informa um endereço onde o servidor local foi estabelecido.
 
 -"yarn build": Transcompila o seu código para um arquivo JavaScript visível, utilizado quando for colocar no servidor. O código transcompilado vai para a pasta "public".
+
+### NPM
+Para começar primeiro execute o comando "npm install".
+
+-"npm run dev": Transcompila o seu código, nesse estado o codigo que foi transcompilado não vai ser visivel para você, e aplica o hot reload. No começo da execução ele informa um endereço onde o servidor local foi estabelecido.
+
+-"npm run build": Transcompila o seu código para um arquivo JavaScript visível, utilizado quando for colocar no servidor. O código transcompilado vai para a pasta "public".
 
 ## Como clonar o repositório
 ### Tendo a plataforma Git instalada
