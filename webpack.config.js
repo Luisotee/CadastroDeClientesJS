@@ -1,7 +1,6 @@
 module.exports = {
     entry: {
         main: './src/scripts/index.js',
-        listItens: './src/scripts/listItens.js'
     },
     output: {
         path: __dirname + '/public',
