@@ -1,32 +1,42 @@
 export function validateForm() {
-    const name = document.querySelector(".name").value;
-    const cell = document.getElementById("celular").value;
-    const email = document.querySelector(".email").value;
-    const cep = document.getElementById("cep").value;
-    const rua = document.querySelector(".street").value;
-    const num = document.querySelector(".number").value;
-    const bairro = document.querySelector(".address").value;
-    const city = document.querySelector(".city").value;
-    const state = document.getElementById("uf").value;
+    const name = document.querySelector(".name");
+    const cell = document.getElementById("celular");
+    const email = document.querySelector(".email");
+    const cep = document.getElementById("cep");
+    const rua = document.querySelector(".street");
+    const num = document.querySelector(".number");
+    const bairro = document.querySelector(".address");
+    const city = document.querySelector(".city");
+    const state = document.getElementById("uf");
 
-    if (name == "") {
+    if (name.value == "") {
+        alert('Preencha o nome!!');
         return false;
-    } else if (cell == "") {
+    } else if (!(cell.value.length == 15)) {
+        alert('Celular incorreto!!');
         return false;
-    } else if (!validateEmail(email)) {
+    } else if (!validateEmail(email.value)) {
         alert('E-mail invalido!!');
         return false;
-    } else if (cep == "") {
+    } else if (alreadyUsedEmail(email.value)) {
+        alert('E-mail já utilizado!!');
         return false;
-    } else if (rua == "") {
+    } else if (!(cep.value.length == 9)) {
+        alert('CEP invalido!!');
         return false;
-    } else if (num == "") {
+    } else if (rua.value == "") {
+        alert('Logradouro invalido!!');
         return false;
-    } else if (bairro == "") {
+    } else if (!(hasNumber(num.value))) {
+        alert('Numero invalido!!');
         return false;
-    } else if (city == "") {
+    } else if (bairro.value == "") {
+        alert('Bairro invalido!!');
         return false;
-    } else if (state == "") {
+    } else if (city.value == "") {
+        alert('Cidade invalida!!');
+        return false;
+    } else if (state.value == "") {
         return false;
     }
     return true;
@@ -35,4 +45,22 @@ export function validateForm() {
 function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+function alreadyUsedEmail(email) {
+    var isUsed = false;
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    users.forEach(function(user) {
+        var testEmail = user.email.toLowerCase();
+        var originalEmail = email.toLowerCase();
+        if (testEmail == originalEmail) {
+            isUsed = true;
+            return false;
+        }
+    });
+    return isUsed;
+}
+
+function hasNumber(myString) {
+    return /\d/.test(myString);
 }

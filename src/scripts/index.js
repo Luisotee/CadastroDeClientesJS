@@ -5,7 +5,6 @@ document.getElementById('send').addEventListener("click", send);
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
 function send() {
-    console.log(users);
     if (utils.validateForm()) {
         const user = {
             nome: document.querySelector(".name").value,
@@ -21,7 +20,6 @@ function send() {
             },
         };
         users.push(user);
-        console.log(users);
         saveToLocal()
     }
 }

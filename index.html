@@ -17,26 +17,25 @@
                 <h1>Helpper</h1>
             </div>
             <div class="forms">
-                <form>
-                    <div>
-                        Nome
-                        <input type="text" class="name" value="Luis" required>
-                    </div>
-                    <div>
-                        Email
-                        <input type="text" class="email" value="luisotaviomgr@hotmail.com" required>
-                    </div>
-                    <div>
-                        Celular
-                        <input type="text" class="form-control" class="cell" id="celular" value="15991306053" minlength="11" maxlength="11" required>
-                    </div>
-                    <div>
-                        CEP
-                        <input type="text" id="cep" value="18087190" minlength="8" maxlength="8" required>
-                    </div>
-                    <div>
-                        <label for="uf">Estado</label>
-                        <select name="uf" id="uf" required>
+                <div>
+                    Nome
+                    <input type="text" class="name" required>
+                </div>
+                <div>
+                    Email
+                    <input type="text" class="email" required>
+                </div>
+                <div>
+                    Celular
+                    <input type="text" class="form-control" class="cell" id="celular" minlength="11" maxlength="11" required>
+                </div>
+                <div>
+                    CEP
+                    <input type="text" id="cep" minlength="8" maxlength="8" required>
+                </div>
+                <div>
+                    <label for="uf">Estado</label>
+                    <select name="uf" id="uf" required>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -65,21 +64,20 @@
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
                         </select>
-                        <label for="cidade" style="margin-left: 137px;">Cidade</label> <input type="text" class="city" name="cidade" value="Cidade" style="width: 40%;" required>
-                    </div>
-                    <div>
-                        Logradouro <input type="text" class="street" value="Logradouro" required>
-                    </div>
-                    <div>
-                        Numero <input type="text" class="number" required>
-                    </div>
-                    <div>
-                        Bairro <input type="text" class="address" value="Bairro" required>
-                    </div>
+                    <label for="cidade" style="margin-left: 137px;">Cidade</label> <input type="text" class="city" name="cidade" style="width: 40%;" required>
+                </div>
+                <div>
+                    Logradouro <input type="text" class="street" required>
+                </div>
+                <div>
+                    Numero <input type="text" class="number" required>
+                </div>
+                <div>
+                    Bairro <input type="text" class="address" required>
+                </div>
             </div>
             <div class="enviar">
                 <button type="button" class="button" id="send">Enviar</button>
-                </form>
                 <a href="./src/views/list.html"><button class="button">Listar</button></a>
             </div>
         </div>
