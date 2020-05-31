@@ -1,0 +1,26 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.corpo {
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+}
+
+.area {
+    margin: 0 auto;
+    margin-top: 75px;
+    width: 782px;
+    display: block;
+}
+
+#list {
+    padding: 10px 10px;
+    font-size: large;
+    background-color: #ffffff;
+    max-width: 752px;
+    padding: 32px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
