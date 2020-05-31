@@ -88,6 +88,18 @@
     <script type="text/javascript">
         $("#celular").mask("(00) 00000-0000");
         $("#cep").mask("99999-999");
+        $("#cep").focusout(function() {
+            $.ajax({
+                url: 'https://viacep.com.br/ws/' + document.getElementById("cep").value + '/json/unicode/',
+                dataType: 'json',
+                success: function(resposta) {
+                    $(".street").val(resposta.logradouro);
+                    $(".address").val(resposta.bairro);
+                    $(".city").val(resposta.localidade);
+                    $("#uf").val(resposta.uf);
+                }
+            });
+        });
     </script>
 </body>
 
