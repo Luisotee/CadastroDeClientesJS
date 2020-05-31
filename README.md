@@ -1,5 +1,5 @@
 # CadastroDeClientesJS
-Formulario de cadastro de clientes feito para aprendizado. Como o programa utiliza o Local Storage não se deve utilizar para uso público.
+Formulario de cadastro de clientes feito para aprendizado. Como o programa utiliza o Local Storage não é recomendado para uso público.
 
 ## Como rodar
 1. Clone o repositório.
