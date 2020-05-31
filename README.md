@@ -6,7 +6,7 @@ Formulario de cadastro de clientes feito para aprendizado. Como o programa utili
 2. Abra a pasta do repositório e vá na pasta "dist".
 3. Abra o "index.html" com seu navegador de preferência.
 
-# CadastroDeClientesJS ENGLISH
+# CadastroDeClientesJS (English)
 Register form for clients built for learning purposes. As it uses Local Storage it's not recommended to use it for the public.
 
 ## How to run
