@@ -1,6 +1,6 @@
 # CadastroDeClientesJS
 Formulario de cadastro de clientes feito para aprendizado. O programa utiliza três elementos de desenvolvimento Web, JavaScript, HTML e CSS.
-No desenvolvimento foi utilizado o loader Babel para a melhor compatibilidade com navegadores mais antigos. Também foi utilizado a biblioteca JQuerry para as máscaras do formulário.
+No desenvolvimento foi utilizado o loader Babel para a melhor compatibilidade com navegadores mais antigos. Também foi utilizado a biblioteca JQuerry para as máscaras do formulário e autopreenchimento pelo CEP com o Ajax.
 
 ## Estrutura do código
 Dentro da pasta do projeto, há uma pasta chamada "dist", nessa pasta possui o código buildado pronto para a utilização.
