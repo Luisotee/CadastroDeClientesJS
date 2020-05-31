@@ -86,6 +86,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script type="text/javascript">
+        // Código que utiliza JQuerry, para fazer a mascara do cep e do celular, e também para o auto preenchimento com o CEP
         $("#celular").mask("(00) 00000-0000");
         $("#cep").mask("99999-999");
         $("#cep").focusout(function() {
@@ -93,10 +94,16 @@
                 url: 'https://viacep.com.br/ws/' + document.getElementById("cep").value + '/json/unicode/',
                 dataType: 'json',
                 success: function(resposta) {
+                    if ("erro" in resposta) {
+                        alert('CEP não encontrado!!')
+                    }
                     $(".street").val(resposta.logradouro);
                     $(".address").val(resposta.bairro);
                     $(".city").val(resposta.localidade);
                     $("#uf").val(resposta.uf);
+                },
+                error: function() {
+                    alert('Houve uma falha na conexão!!');
                 }
             });
         });

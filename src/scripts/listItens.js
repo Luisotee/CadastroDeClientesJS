@@ -1,8 +1,8 @@
 var listElement = document.querySelector('#list ul');
 
-const users = JSON.parse(localStorage.getItem('users')) || [];
+const users = JSON.parse(localStorage.getItem('users')) || []; // Recupera os usuarios ja registrados no Local Storage do navegador
 
-function renderUsers() {
+function renderUsers() { // Renderiza os usuarios na tela
     listElement.innerHTML = '';
 
     for (user of users) {
@@ -13,6 +13,7 @@ function renderUsers() {
 
         var pos = users.indexOf(user);
 
+        // Lista os usuarios na tag <ul> do html
         const userName = document.createTextNode("Nome: " + user.nome);
         userElement.appendChild(userName);
         userElement.appendChild(document.createElement("br"));

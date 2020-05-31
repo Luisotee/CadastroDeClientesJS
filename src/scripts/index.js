@@ -2,7 +2,7 @@ import * as utils from './validateCadastro';
 
 document.getElementById('send').addEventListener("click", send);
 
-const users = JSON.parse(localStorage.getItem('users')) || [];
+const users = JSON.parse(localStorage.getItem('users')) || []; // Recupera os usuarios ja registrados no Local Storage do navegador
 
 function send() {
     if (utils.validateForm()) {
@@ -25,6 +25,6 @@ function send() {
 }
 
 
-function saveToLocal() {
+function saveToLocal() { // Função de salvar o usuario no Local Storage
     localStorage.setItem('users', JSON.stringify(users));
 }

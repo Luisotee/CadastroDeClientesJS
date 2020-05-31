@@ -1,14 +1,14 @@
-export function validateForm() {
-    const name = document.querySelector(".name");
-    const cell = document.getElementById("celular");
-    const email = document.querySelector(".email");
-    const cep = document.getElementById("cep");
-    const rua = document.querySelector(".street");
-    const num = document.querySelector(".number");
-    const bairro = document.querySelector(".address");
-    const city = document.querySelector(".city");
-    const state = document.getElementById("uf");
+const name = document.querySelector(".name");
+const cell = document.getElementById("celular");
+const email = document.querySelector(".email");
+const cep = document.getElementById("cep");
+const rua = document.querySelector(".street");
+const num = document.querySelector(".number");
+const bairro = document.querySelector(".address");
+const city = document.querySelector(".city");
+const state = document.getElementById("uf");
 
+export function validateForm() {
     if (name.value == "") {
         alert('Preencha o nome!!');
         return false;
