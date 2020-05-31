@@ -13,7 +13,8 @@ export function validateForm() {
         return false;
     } else if (cell == "") {
         return false;
-    } else if (email == "") {
+    } else if (!validateEmail(email)) {
+        alert('E-mail invalido!!');
         return false;
     } else if (cep == "") {
         return false;
@@ -29,4 +30,9 @@ export function validateForm() {
         return false;
     }
     return true;
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
